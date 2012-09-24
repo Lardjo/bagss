@@ -1,6 +1,6 @@
 #!usr/bin/env python3
-# nfshp.py
-# Plugin version: v1.0 Beta 1
+# File: nfshp.py
+# Plugin version: v1.0
 # Game Name: Need for Speed Hot Pursuit
 
 import os

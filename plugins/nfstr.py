@@ -1,6 +1,6 @@
 #!usr/bin/env python3
-# nfstr.py
-# Plugin version: v1.0 Beta 1
+# File: nfstr.py
+# Plugin version: v1.0
 # Game Name: Need for Speed The Run
 
 import os
