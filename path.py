@@ -1,4 +1,5 @@
 #!usr/bin/env python3
+# File: path.py
 # Path file
 
 import os
@@ -53,7 +54,7 @@ except WindowsError:
     pass
 
 try:
-
+    
     key = OpenKey(HKEY_CURRENT_USER, 'Volatile Environment')
     UserName = QueryValueEx(key, 'USERNAME') [0]
 
