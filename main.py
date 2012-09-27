@@ -19,7 +19,7 @@ print ("Hi, %s!\n" % path.UserName)
 
 # Checking existence of directory Backup
 
-if os.path.exists("Backup") == True:
+if os.path.exists("Backup"):
 
 	info = "Success!"
 
@@ -30,7 +30,7 @@ else:
 		os.mkdir("Backup")
 		info = "Not found. Create a folder."
 
-	except WindowsError:
+	except OSError:
 
 		info = "Error! Folder not created!"
 
