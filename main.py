@@ -8,9 +8,13 @@ import path
 
 s = ""
 
-print ("\n")
-print ("BAGSS v0.1 Beta")
-print ("\nHi,",path.UserName,"!\n")
+print ("""
+================================	
+		BAGSS v0.1 Beta
+================================
+""")
+
+print ("Hi,",path.UserName,"!\n")
 
 # Checking existence of directory 'Backup'
 #
