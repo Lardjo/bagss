@@ -14,7 +14,7 @@ print ("""
 ================================
 """)
 
-print ("Hi,",path.UserName,"!\n")
+print ("Hi, %s!" % path.UserName)
 
 # Checking existence of directory 'Backup'
 #
@@ -44,8 +44,9 @@ print ("Loading complete!")
 #
 # -- END Loading all plugins --
 
-print ("\nTo Start backup type 'backup' and press Enter...")
-print ("...or type 'exit' for exit.")
+print ("""
+To Start backup type 'backup' and press Enter...
+...or type 'exit' for exit.""")
 
 while (s != 'exit'):
 
