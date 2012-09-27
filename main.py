@@ -14,7 +14,7 @@ print ("\nHi,",path.UserName,"!\n")
 
 # Checking existence of directory 'Backup'
 #
-print ("Сhecking the backup folder...")
+print ("Checking the backup folder...")
 
 if os.path.exists("Backup") == True:
 
