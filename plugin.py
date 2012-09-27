@@ -1,4 +1,4 @@
-#!usr/bin/env python3
+/#!usr/bin/env python3
 # File: plugin.py
 # Plugin System
 
@@ -29,7 +29,7 @@ def LoadPlugins():
 
         try:
 
-            mod = __import__("plugins."+os.path.splitext(pluglist)[0])  
+            mod = __import__("plugins."+os.path.splitext(pluglist)[0])
 
         except ImportError:
             pass
