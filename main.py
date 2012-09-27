@@ -14,35 +14,41 @@ print ("""
 ================================
 """)
 
-print ("Hi, %s!" % path.UserName)
+print ("Hi, %s!\n" % path.UserName)
 
-# Checking existence of directory 'Backup'
-#
-print ("Checking the backup folder...")
+
+# Checking existence of directory Backup
 
 if os.path.exists("Backup") == True:
 
-	print ("Success!") # All right
+	info = "Success!"
 
 else:
 
-	print ("Backup dir not found! Creating folder...")
+	try:
 
-	os.mkdir("Backup") # Create folder
+		os.mkdir("Backup")
+		info = "Not found. Create a folder."
 
-	print ("Backup folder created!\n")
-#
-# -- END Checking existence of directory 'Backup' --
+	except WindowsError:
+
+		info = "Error! Folder not created!"
+
+print ("Checking the backup folder... %s" % info)
+
+# END Checking existence of directory Backup
+
 
 # Loading all plugins
-#
+
 print ("Loading plugins...")
 
 plugin.LoadPlugins()
 
 print ("Loading complete!")
-#
-# -- END Loading all plugins --
+
+# END Loading all plugins
+
 
 print ("""
 To Start backup type 'backup' and press Enter...
