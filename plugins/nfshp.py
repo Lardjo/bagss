@@ -16,6 +16,7 @@ class NFSHPPlugin(Plugin):
 
     Name = "NFSHP"
     Author = "Lardjo"
+    SupportOS = ["Windows"] #key-words: Windows, Linux, OSX
 
     def OnLoad(self):
 
