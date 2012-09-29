@@ -3,7 +3,6 @@
 # Plugin System v1
 
 import os
-import sys
 import platform
 
 
