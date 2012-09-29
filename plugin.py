@@ -4,9 +4,11 @@
 
 import os
 import sys
+import platform
 
 
 Plugins = []
+s = platform.system()
 
 
 class Plugin(object):
@@ -35,9 +37,21 @@ def LoadPlugins():
             pass
         
     for plugin in Plugin.__subclasses__():
-        
-        p = plugin()
-        Plugins.append(p)
-        p.OnLoad()
+
+        try:
+
+            if s in plugin.SupportOS:
+
+                p = plugin()
+                Plugins.append(p)
+                p.OnLoad()
+
+            else:
+
+                print ("Plugin for {} not supported on your PC".format(plugin.Name))
+
+        except KeyError:
+
+            print ("Error 0x001")
 
     return

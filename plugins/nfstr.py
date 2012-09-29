@@ -14,8 +14,9 @@ from package import PackageSystem
 
 class NFSTRPlugin(Plugin):
 
-    Name = "NFSTR"
+    Name = "NFS:TR"
     Author = "Lardjo"
+    SupportOS = ["Windows"] #key-words: Windows, Linux, Darwin
 
     def OnLoad(self):
 
