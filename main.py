@@ -28,7 +28,7 @@ else:
 	try:
 
 		os.mkdir("Backup")
-		info = "Not found. Create a folder."
+		info = "Not found. Create a folder"
 
 	except OSError:
 
