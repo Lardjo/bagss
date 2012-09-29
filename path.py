@@ -3,7 +3,6 @@
 # Path file
 
 import os
-import sys
 
 
 from winreg import HKEY_CURRENT_USER, OpenKey, QueryValueEx
@@ -16,7 +15,7 @@ LocalAppPath = None      # Windows Local Data Directory
 UserName = None          # User Name
 
 # Get All Path
-#
+
 try:
 
     key = OpenKey(HKEY_CURRENT_USER, 'Software\\Valve\\Steam')
@@ -60,5 +59,5 @@ try:
 
 except WindowsError:
     pass
-#
+
 # END Get All Path
