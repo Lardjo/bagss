@@ -2,6 +2,10 @@
 # File: main.py
 # Main File
 
+__version__ = "0.1.0"
+__author__ = "Konstantin N."
+__copyright__ = "2012 (с) Network Sys."
+
 import os
 import plugin
 import path
@@ -10,9 +14,9 @@ s = ""
 
 print ("""
 ================================	
-        BAGSS v0.1 Beta
+        BAGSS v.%s
 ================================
-""")
+""" % __version__)
 
 print ("Hi, %s!\n" % path.UserName)
 

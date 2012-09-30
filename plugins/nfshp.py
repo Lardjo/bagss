@@ -1,7 +1,10 @@
 #!usr/bin/env python3
 # File: nfshp.py
-# Plugin version: v1.0
 # Game Name: Need for Speed Hot Pursuit
+
+__version__ = "0.1.0"
+__author__ = "Konstantin N."
+__copyright__ = "2012 (с) Network Sys."
 
 import os
 import sys
@@ -15,7 +18,6 @@ from package import PackageSystem
 class NFSHPPlugin(Plugin):
 
     Name = "NFSHP"
-    Author = "Lardjo"
 
     def OnLoad(self):
 
