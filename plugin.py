@@ -47,7 +47,7 @@ def LoadPlugins():
 
             else:
 
-                print ("Plugin for {} not supported on your PC".format(plugin.Name))
+                print ("Plugin {0} not supported on your {1}".format(plugin.Name, s))
 
         except KeyError:
 
