@@ -2,7 +2,7 @@
 # File: main.py
 # Main File
 
-__version__ = "0.1.0"
+__version__ = "0.1.1"
 __author__ = "Konstantin N."
 __copyright__ = "2012 (с) Network Sys."
 
@@ -19,7 +19,6 @@ print ("""
 """ % __version__)
 
 print ("Hi, %s!\n" % path.UserName)
-
 
 # Checking existence of directory Backup
 
@@ -42,7 +41,6 @@ print ("Checking the backup folder... %s" % info)
 
 # END Checking existence of directory Backup
 
-
 # Loading all plugins
 
 print ("Loading plugins...")
@@ -52,7 +50,6 @@ plugin.LoadPlugins()
 print ("Loading complete!")
 
 # END Loading all plugins
-
 
 print ("""
 To Start backup type 'backup' and press Enter...

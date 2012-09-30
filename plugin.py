@@ -2,29 +2,26 @@
 # File: plugin.py
 # Plugin System
 
-__version__ = "0.1.0"
+__version__ = "0.1.1"
 __author__ = "Konstantin N."
 __copyright__ = "2012 (с) Network Sys."
 
 import os
 import platform
 
-
 Plugins = []
 s = platform.system()
-
 
 class Plugin(object):
 
     Name = "BAGSS"
-    Author = "Lardjo"
+    Author = __author__
 
     def OnLoad(self):
         pass
 
     def OnCommand(self, cmd):
         pass
-
 
 def LoadPlugins():
     

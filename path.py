@@ -2,23 +2,19 @@
 # File: path.py
 # Path file
 
-__version__ = "0.1.0"
+__version__ = "0.1.1"
 __author__ = "Konstantin N."
 __copyright__ = "2012 (с) Network Sys."
 
 import os
 
-
 from winreg import HKEY_CURRENT_USER, OpenKey, QueryValueEx
-
 
 SteamGamesPath = None    # Steam Common Directory
 DocumentsPath = None     # Windows My Documents Directory
 GamesPath = None         # Windows My Games Directory
 LocalAppPath = None      # Windows Local Data Directory 
 UserName = None          # User Name
-
-# Get All Path
 
 try:
 
@@ -63,5 +59,3 @@ try:
 
 except WindowsError:
     pass
-
-# END Get All Path
