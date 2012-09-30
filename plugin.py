@@ -1,6 +1,6 @@
 #!usr/bin/env python3
 # File: plugin.py
-# Plugin System v1
+# Plugin System
 
 import os
 import sys
