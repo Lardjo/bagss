@@ -1,5 +1,10 @@
 #!usr/bin/env python3
+# File: main.py
 # Main File
+
+__version__ = "0.1.0"
+__author__ = "Konstantin N."
+__copyright__ = "2012 (с) Network Sys."
 
 import os
 import plugin
@@ -7,20 +12,51 @@ import path
 
 s = ""
 
-print ("\n")
-print ("**************************************************************")
-print ("*                        _v1.0 Alpha_                        *")
-print ("**************************************************************")
-print ("\nHi,",path.UserName,"!\n")
+print ("""
+================================	
+        BAGSS v.%s
+================================
+""" % __version__)
+
+print ("Hi, %s!\n" % path.UserName)
+
+
+# Checking existence of directory Backup
+
+if os.path.exists("Backup"):
+
+	info = "Success!"
+
+else:
+
+	try:
+
+		os.mkdir("Backup")
+		info = "Not found. Create a folder"
+
+	except OSError:
+
+		info = "Error! Folder not created!"
+
+print ("Checking the backup folder... %s" % info)
+
+# END Checking existence of directory Backup
+
+
+# Loading all plugins
+
 print ("Loading plugins...")
-print ("------------------")
 
 plugin.LoadPlugins()
 
-print ("-----------------")
 print ("Loading complete!")
-print ("\nTo Start backup type 'backup' and press Enter...")
-print ("...or type 'exit' for exit.")
+
+# END Loading all plugins
+
+
+print ("""
+To Start backup type 'backup' and press Enter...
+...or type 'exit' for exit.""")
 
 while (s != 'exit'):
 
