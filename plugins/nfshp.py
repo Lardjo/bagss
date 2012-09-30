@@ -17,7 +17,9 @@ from package import PackageSystem
 
 class NFSHPPlugin(Plugin):
 
-    Name = "NFSHP"
+    Name = "NFS:HP"
+    Author = "Lardjo"
+    SupportOS = ["Windows"] #key-words: Windows, Linux, Darwin
 
     def OnLoad(self):
 

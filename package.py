@@ -7,10 +7,8 @@ __author__ = "Konstantin N."
 __copyright__ = "2012 (с) Network Sys."
 
 import os
-import sys
 import tarfile
 import time
-import plugin
 
 source = None
       

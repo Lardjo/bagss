@@ -7,10 +7,11 @@ __author__ = "Konstantin N."
 __copyright__ = "2012 (с) Network Sys."
 
 import os
-import sys
+import platform
 
 
 Plugins = []
+s = platform.system()
 
 
 class Plugin(object):
@@ -39,9 +40,21 @@ def LoadPlugins():
             pass
         
     for plugin in Plugin.__subclasses__():
-        
-        p = plugin()
-        Plugins.append(p)
-        p.OnLoad()
+
+        try:
+
+            if s in plugin.SupportOS:
+
+                p = plugin()
+                Plugins.append(p)
+                p.OnLoad()
+
+            else:
+
+                print ("Plugin {0} not supported on your {1}".format(plugin.Name, s))
+
+        except KeyError:
+
+            print ("Error 0x001")
 
     return
