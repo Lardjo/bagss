@@ -3,14 +3,19 @@
 # Main File
 
 import os
+import sys
 import plugin
 import path
+
+sys.path.append('../')
+
+from BAGSS import __version__
 
 s = ""
 
 print ("""
 ================================	
-        BAGSS v.%s
+        BAGSS v%s
 ================================
 """ % __version__)
 

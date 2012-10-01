@@ -11,7 +11,6 @@ s = platform.system()
 class Plugin(object):
 
     Name = "BAGSS"
-    Author = __author__
 
     def OnLoad(self):
         pass
