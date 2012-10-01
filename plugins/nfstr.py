@@ -2,10 +2,6 @@
 # File: nfstr.py
 # Game Name: Need for Speed The Run
 
-__version__ = "0.1.0"
-__author__ = "Konstantin N."
-__copyright__ = "2012 (с) Network Sys."
-
 import os
 import sys
 

@@ -2,10 +2,6 @@
 # File: plugin.py
 # Plugin System
 
-__version__ = "0.1.1"
-__author__ = "Konstantin N."
-__copyright__ = "2012 (с) Network Sys."
-
 import os
 import platform
 
