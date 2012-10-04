@@ -7,5 +7,5 @@ History
 ++++++++++++++++++++
 
 - First version
-- Added support for Need for Speed: Hot Pursuit 2010
-- Added support for Need for Speed: The Run
+- Added support for NFS: Hot Pursuit 2010
+- Added support for NFS: The Run
