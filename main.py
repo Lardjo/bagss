@@ -13,6 +13,7 @@ sys.path.append('../')
 from BAGSS import __version__
 
 s = ""
+i = 0
 
 print ("""
 ================================	
@@ -64,4 +65,7 @@ while (s != 'exit'):
 
     for p in plugin.Plugins:
 
-        p.OnCommand(a[0])
+    		p.OnCommand(a[0])
+    		i = i + 1
+
+    print ("Backup {0} games complite!".format(i))

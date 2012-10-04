@@ -8,7 +8,7 @@ import time
 
 source = None
       
-def PackageSystem(source, gname, tnumber):
+def PackageSystem(source, gname):
 
     destination = gname
 
@@ -18,7 +18,7 @@ def PackageSystem(source, gname, tnumber):
         tar = tarfile.open(os.path.join(".","backup", targetBackup), "w:gz")
         tar.add(source)
         tar.close()
-        print ("Backup Complete!")
+        #print ("Backup Complete!")
 
     except TypeError:
         
