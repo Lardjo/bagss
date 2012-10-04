@@ -19,7 +19,7 @@ class NFSHPPlugin(Plugin):
 
     def OnLoad(self):
 
-        print ("NFS Hot Pursuit 2010: Plugin Loaded!")
+        pass
         
     def OnCommand(self,cmd):
 

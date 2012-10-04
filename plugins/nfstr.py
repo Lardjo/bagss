@@ -19,7 +19,7 @@ class NFSTRPlugin(Plugin):
 
     def OnLoad(self):
 
-        print ("NFS The Run: Plugin Loaded!")
+        pass
         
     def OnCommand(self,cmd):
 

@@ -6,14 +6,13 @@ import os
 import sys
 import plugin
 import path
-import package
 
 sys.path.append('../')
 
 from BAGSS import __version__
 
 s = ""
-i = 0
+ib = 0
 
 print ("""
 ================================	
@@ -46,11 +45,9 @@ print ("Checking the backup folder... %s" % info)
 
 # Loading all plugins
 
-print ("Loading plugins...")
-
 plugin.LoadPlugins()
 
-print ("Loading complete!")
+print ("Succes!")
 
 # END Loading all plugins
 
@@ -66,6 +63,6 @@ while (s != 'exit'):
     for p in plugin.Plugins:
 
     		p.OnCommand(a[0])
-    		i = i + 1
+    		ib += 1
 
-    print ("Backup {0} games complite!".format(i))
+    print ("Backup {0} games complite!".format(ib))
