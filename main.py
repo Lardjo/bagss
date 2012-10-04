@@ -6,6 +6,7 @@ import os
 import sys
 import plugin
 import path
+import package
 
 sys.path.append('../')
 
