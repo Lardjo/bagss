@@ -21,16 +21,16 @@ class NFSTRPlugin(Plugin):
 
         pass
         
-    def OnCommand(self,cmd):
+    def OnCommand(self):
 
-        if (cmd == 'backup'):
+        #if (cmd == 'backup'):
 
-            GamePath = os.path.join (DocumentsPath, "NFSTR")
-            GameName = "Need_for_Speed_The_Run"
-            PackageSystem(source=GamePath, gname=GameName)
+        GamePath = os.path.join (DocumentsPath, "NFSTR")
+        GameName = "Need_for_Speed_The_Run"
+        PackageSystem(source=GamePath, gname=GameName)
 
-            return True
+            #return True
 
-        else:
+        #else:
 
-            return False
+           # return False

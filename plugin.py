@@ -21,7 +21,6 @@ class Plugin(object):
 def LoadPlugins():
 
     plug = os.listdir('plugins')
-
     il = 0
 
     for pluglist in plug:

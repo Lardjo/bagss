@@ -12,7 +12,6 @@ sys.path.append('../')
 from BAGSS import __version__
 
 s = ""
-ib = 0
 
 print ("""
 ================================	
@@ -39,15 +38,22 @@ else:
 
 		info = "Error! Folder not created!"
 
-print ("Checking the backup folder... %s" % info)
+print ("Checking the backup folder... {0}".format(info))
 
 # END Checking existence of directory Backup
 
 # Loading all plugins
 
-plugin.LoadPlugins()
+try:
 
-print ("Succes!")
+    plugin.LoadPlugins()
+    info = "Succes!"
+
+except IOError:
+
+    info = "Error!"
+
+print ("Checking load plugins... {0}".format(info))
 
 # END Loading all plugins
 
@@ -59,10 +65,19 @@ while (s != 'exit'):
 
     s = input()
     a = s.split(" ")
+    ib = 0
 
-    for p in plugin.Plugins:
+    if s == 'backup':
 
-    		p.OnCommand(a[0])
-    		ib += 1
+        print ("Start backup...")
 
-    print ("Backup {0} games complite!".format(ib))
+        for p in plugin.Plugins:
+
+            p.OnCommand()
+            ib += 1
+
+        print ("Backup {0} games complite!".format(ib))
+
+    else:
+
+        pass
