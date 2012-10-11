@@ -49,6 +49,6 @@ def LoadPlugins():
 
         except KeyError:
 
-            print ("Error 0x001")
+            print ("Error!")
 
-    return
+    return il

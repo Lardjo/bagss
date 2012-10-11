@@ -53,7 +53,7 @@ except IOError:
 
     info = "Error!"
 
-print ("Checking load plugins... {0}".format(info))
+print ("Loaded {0} plugins... {1}".format(len(plugin.Plugins), info))
 
 # END Loading all plugins
 
