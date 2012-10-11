@@ -15,7 +15,7 @@ class Plugin(object):
     def OnLoad(self):
         pass
 
-    def OnCommand(self, cmd):
+    def OnCommand(self):
         pass
 
 def LoadPlugins():
