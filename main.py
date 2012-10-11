@@ -47,13 +47,13 @@ print ("Checking the backup folder... {0}".format(info))
 try:
 
     plugin.LoadPlugins()
-    info = "Succes!"
+    info = "Success!"
 
 except IOError:
 
     info = "Error!"
 
-print ("Loaded {0} plugins... {1}".format(len(plugin.Plugins), info))
+print ("Checking load plugins... Loaded {0} plugins... {1}".format(len(plugin.Plugins), info))
 
 # END Loading all plugins
 
