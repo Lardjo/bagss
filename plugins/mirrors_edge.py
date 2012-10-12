@@ -1,6 +1,6 @@
 #!usr/bin/env python3
-# File: nfstr.py
-# Game Name: Need for Speed The Run
+# File: nfshp.py
+# Game Name: Mirror's Edge
 
 import os
 import sys
@@ -11,9 +11,9 @@ from plugin import Plugin
 from path import DocumentsPath
 from package import PackageSystem
 
-class NFSTRPlugin(Plugin):
+class NFSHPPlugin(Plugin):
 
-    Name = "NFS:TR"
+    Name = "Mirror's Edge"
     Author = "Lardjo"
     SupportOS = ["Windows"] #key-words: Windows, Linux, Darwin
 
@@ -22,6 +22,6 @@ class NFSTRPlugin(Plugin):
         
     def OnCommand(self):
 
-        GamePath = os.path.join (DocumentsPath, "NFSTR")
-        GameName = "Need_for_Speed_The_Run"
+        GamePath = os.path.join (DocumentsPath, "EA Games", "Mirror's Edge")
+        GameName = "Mirrors_Edge"
         PackageSystem(source=GamePath, gname=GameName)

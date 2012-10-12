@@ -2,24 +2,24 @@
 # File: main.py
 # Main File
 
-__version__ = "0.1.0"
-__author__ = "Konstantin N."
-__copyright__ = "2012 (с) Network Sys."
-
 import os
+import sys
 import plugin
 import path
+
+sys.path.append('../')
+
+from BAGSS import __version__
 
 s = ""
 
 print ("""
 ================================	
-        BAGSS v.%s
+        BAGSS v%s
 ================================
 """ % __version__)
 
 print ("Hi, %s!\n" % path.UserName)
-
 
 # Checking existence of directory Backup
 
@@ -38,21 +38,24 @@ else:
 
 		info = "Error! Folder not created!"
 
-print ("Checking the backup folder... %s" % info)
+print ("Checking the backup folder... {0}".format(info))
 
 # END Checking existence of directory Backup
 
-
 # Loading all plugins
 
-print ("Loading plugins...")
+try:
 
-plugin.LoadPlugins()
+    plugin.LoadPlugins()
+    info = "Success!"
 
-print ("Loading complete!")
+except IOError:
+
+    info = "Error!"
+
+print ("Checking load plugins... Loaded {0} plugins... {1}".format(len(plugin.Plugins), info))
 
 # END Loading all plugins
-
 
 print ("""
 To Start backup type 'backup' and press Enter...
@@ -62,7 +65,19 @@ while (s != 'exit'):
 
     s = input()
     a = s.split(" ")
+    i = 0
 
-    for p in plugin.Plugins:
+    if s == 'backup':
 
-        p.OnCommand(a[0])
+        print ("Start backup...")
+
+        for p in plugin.Plugins:
+
+            p.OnCommand()
+            i += 1
+
+        print ("Backup {0} games complite!".format(i))
+
+    else:
+
+        pass
