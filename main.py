@@ -38,17 +38,22 @@ else:
 
 		info = "Error! Folder not created!"
 
-print ("Checking the backup folder... %s" % info)
+print ("Checking the backup folder... {0}".format(info))
 
 # END Checking existence of directory Backup
 
 # Loading all plugins
 
-print ("Loading plugins...")
+try:
 
-plugin.LoadPlugins()
+    plugin.LoadPlugins()
+    info = "Success!"
 
-print ("Loading complete!")
+except IOError:
+
+    info = "Error!"
+
+print ("Checking load plugins... Loaded {0} plugins... {1}".format(len(plugin.Plugins), info))
 
 # END Loading all plugins
 
@@ -60,7 +65,19 @@ while (s != 'exit'):
 
     s = input()
     a = s.split(" ")
+    ib = 0
 
-    for p in plugin.Plugins:
+    if s == 'backup':
 
-        p.OnCommand(a[0])
+        print ("Start backup...")
+
+        for p in plugin.Plugins:
+
+            p.OnCommand()
+            ib += 1
+
+        print ("Backup {0} games complite!".format(ib))
+
+    else:
+
+        pass

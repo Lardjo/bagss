@@ -15,12 +15,13 @@ class Plugin(object):
     def OnLoad(self):
         pass
 
-    def OnCommand(self, cmd):
+    def OnCommand(self):
         pass
 
 def LoadPlugins():
-    
+
     plug = os.listdir('plugins')
+    il = 0
 
     for pluglist in plug:
 
@@ -40,6 +41,7 @@ def LoadPlugins():
                 p = plugin()
                 Plugins.append(p)
                 p.OnLoad()
+                il += 1
 
             else:
 
@@ -47,6 +49,6 @@ def LoadPlugins():
 
         except KeyError:
 
-            print ("Error 0x001")
+            print ("Error!")
 
-    return
+    return il

@@ -18,7 +18,7 @@ def PackageSystem(source, gname):
         tar = tarfile.open(os.path.join(".","backup", targetBackup), "w:gz")
         tar.add(source)
         tar.close()
-        print ("Backup Complete!")
+        #print ("Backup Complete!")
 
     except TypeError:
         

@@ -19,18 +19,18 @@ class NFSHPPlugin(Plugin):
 
     def OnLoad(self):
 
-        print ("NFS Hot Pursuit 2010: Plugin Loaded!")
+        pass
         
-    def OnCommand(self,cmd):
+    def OnCommand(self):
 
-        if (cmd == 'backup'):
+        #if (cmd == 'backup'):
 
-            GamePath = os.path.join (DocumentsPath, "Criterion Games", "Need for Speed(TM) Hot Pursuit")
-            GameName = "Need_for_Speed_Hot_Pursuit"
-            PackageSystem(source=GamePath, gname=GameName)
+        GamePath = os.path.join (DocumentsPath, "Criterion Games", "Need for Speed(TM) Hot Pursuit")
+        GameName = "Need_for_Speed_Hot_Pursuit"
+        PackageSystem(source=GamePath, gname=GameName)
 
-            return True
+           # return True
 
-        else:
+       # else:
 
-            return False
+          # return False
