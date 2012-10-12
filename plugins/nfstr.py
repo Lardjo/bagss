@@ -18,19 +18,10 @@ class NFSTRPlugin(Plugin):
     SupportOS = ["Windows"] #key-words: Windows, Linux, Darwin
 
     def OnLoad(self):
-
         pass
         
     def OnCommand(self):
 
-        #if (cmd == 'backup'):
-
         GamePath = os.path.join (DocumentsPath, "NFSTR")
         GameName = "Need_for_Speed_The_Run"
         PackageSystem(source=GamePath, gname=GameName)
-
-            #return True
-
-        #else:
-
-           # return False

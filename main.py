@@ -65,7 +65,7 @@ while (s != 'exit'):
 
     s = input()
     a = s.split(" ")
-    ib = 0
+    i = 0
 
     if s == 'backup':
 
@@ -74,9 +74,9 @@ while (s != 'exit'):
         for p in plugin.Plugins:
 
             p.OnCommand()
-            ib += 1
+            i += 1
 
-        print ("Backup {0} games complite!".format(ib))
+        print ("Backup {0} games complite!".format(i))
 
     else:
 

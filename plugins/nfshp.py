@@ -18,19 +18,10 @@ class NFSHPPlugin(Plugin):
     SupportOS = ["Windows"] #key-words: Windows, Linux, Darwin
 
     def OnLoad(self):
-
         pass
         
     def OnCommand(self):
 
-        #if (cmd == 'backup'):
-
         GamePath = os.path.join (DocumentsPath, "Criterion Games", "Need for Speed(TM) Hot Pursuit")
         GameName = "Need_for_Speed_Hot_Pursuit"
         PackageSystem(source=GamePath, gname=GameName)
-
-           # return True
-
-       # else:
-
-          # return False

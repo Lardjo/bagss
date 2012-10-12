@@ -21,7 +21,6 @@ class Plugin(object):
 def LoadPlugins():
 
     plug = os.listdir('plugins')
-    il = 0
 
     for pluglist in plug:
 
@@ -41,7 +40,6 @@ def LoadPlugins():
                 p = plugin()
                 Plugins.append(p)
                 p.OnLoad()
-                il += 1
 
             else:
 
@@ -51,4 +49,4 @@ def LoadPlugins():
 
             print ("Error!")
 
-    return il
+    return
