@@ -18,6 +18,9 @@ class Plugin(object):
     def OnCommand(self):
         pass
 
+    def OnRestore(self):
+        pass
+
 def LoadPlugins():
 
     plug = os.listdir('plugins')
