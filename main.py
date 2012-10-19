@@ -78,6 +78,17 @@ while (s != 'exit'):
 
         print ("Backup {0} games complite!".format(i))
 
+    elif s == 'restore':
+
+        print ("Start restore...")
+
+        for p in plugin.Plugins:
+
+            p.OnRestore()
+            i += 1
+
+        print ("Restore {0} games complite!".format(i))
+
     else:
 
         pass
