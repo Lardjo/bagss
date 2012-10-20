@@ -5,7 +5,7 @@
 import os
 import tarfile
    
-def PackageSystem(source, gname):
+def Package(source, gname):
 
     try:
 
@@ -18,7 +18,7 @@ def PackageSystem(source, gname):
         
         print ("Backup fail!")
 
-def UnPackageSystem(source, gname):
+def UnPackage(source, gname):
 
 	try:
 

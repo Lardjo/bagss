@@ -9,10 +9,10 @@ sys.path.append('../')
 
 from plugin import Plugin
 from path import DocumentsPath
-from package import PackageSystem
-from package import UnPackageSystem
+from package import Package
+from package import UnPackage
 
-class NFSHPPlugin(Plugin):
+class MirrorsPlugin(Plugin):
 
     Name = "Mirror's Edge"
     Author = "Lardjo"
@@ -23,12 +23,12 @@ class NFSHPPlugin(Plugin):
         
     def OnCommand(self):
 
-        GPath = os.path.join(DocumentsPath, "EA Games", "Mirror's Edge")
-        GName = "Mirror's Edge"
-        PackageSystem(source=GPath, gname=GName)
+        path = os.path.join(DocumentsPath, "EA Games", "Mirror's Edge")
+        name = "Mirror's Edge"
+        Package(source=path, gname=name)
 
     def OnRestore(self):
 
-    	GPath = os.path.join(DocumentsPath, "EA Games")
-    	GName = "Mirror's Edge"
-    	UnPackageSystem(source=GPath, gname=GName)
+    	path = os.path.join(DocumentsPath, "EA Games")
+    	name = "Mirror's Edge"
+    	UnPackage(source=path, gname=name)
