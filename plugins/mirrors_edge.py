@@ -29,6 +29,6 @@ class MirrorsPlugin(Plugin):
 
     def OnRestore(self):
 
-    	path = os.path.join(DocumentsPath, "EA Games", "Mirror's Edge")
+    	path = os.path.join(DocumentsPath, "EA Games")
     	name = "Mirror's Edge"
     	UnPackage(source=path, gname=name)
