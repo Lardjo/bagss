@@ -11,7 +11,7 @@ def Package(source, gname):
 
         targetBackup = (gname + ".tar.gz")
         tar = tarfile.open(os.path.join(".","backup", targetBackup), "w:gz")
-        tar.add(source, arcname=gname)
+        tar.add(source, os.path.basename(source))
         tar.close()
 
     except TypeError:

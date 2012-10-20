@@ -9,12 +9,13 @@ sys.path.append('../')
 
 from plugin import Plugin
 from path import DocumentsPath
-from package import PackageSystem
+from package import Package
+from package import UnPackage
 
-class NFSTRPlugin(Plugin):
+class TheRunPlugin(Plugin):
 
-    Name = "NFS:TR"
-    Author = "Lardjo"
+    Name = "Need for Speed(TM) The Run"
+    Author = "Konstantin N."
     SupportOS = ["Windows"] #key-words: Windows, Linux, Darwin
 
     def OnLoad(self):
@@ -22,6 +23,12 @@ class NFSTRPlugin(Plugin):
         
     def OnCommand(self):
 
-        GamePath = os.path.join (DocumentsPath, "NFSTR")
-        GameName = "Need_for_Speed_The_Run"
-        PackageSystem(source=GamePath, gname=GameName)
+        path = os.path.join(DocumentsPath, "NFSTR")
+        name = "Need for Speed(TM) The Run"
+        Package(source=path, gname=name)
+
+    def OnRestore(self):
+
+    	path = DocumentsPath
+    	name = "Need for Speed(TM) The Run"
+    	UnPackage(source=path, gname=name)
