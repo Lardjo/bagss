@@ -15,7 +15,7 @@ from package import UnPackage
 class MirrorsPlugin(Plugin):
 
     Name = "Mirror's Edge"
-    Author = "Lardjo"
+    Author = "Konstantin N."
     SupportOS = ["Windows"] #key-words: Windows, Linux, Darwin
 
     def OnLoad(self):
