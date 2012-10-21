@@ -9,12 +9,13 @@ sys.path.append('../')
 
 from plugin import Plugin
 from path import DocumentsPath
-from package import PackageSystem
+from package import Package
+from package import UnPackage
 
-class NFSHPPlugin(Plugin):
+class SkyrimPlugin(Plugin):
 
-    Name = "TESV:Skyrim"
-    Author = "Lardjo"
+    Name = "The Elder Scrolls V Skyrim"
+    Author = "Konstantin N."
     SupportOS = ["Windows"] #key-words: Windows, Linux, Darwin
 
     def OnLoad(self):
@@ -22,6 +23,12 @@ class NFSHPPlugin(Plugin):
         
     def OnCommand(self):
 
-        GamePath = os.path.join (DocumentsPath, "my games", "skyrim")
-        GameName = "The_Elder_Scrolls_V_Skyrim"
-        PackageSystem(source=GamePath, gname=GameName)
+        path = os.path.join (DocumentsPath, "my games", "skyrim")
+        name = "The Elder Scrolls V Skyrim"
+        Package(source=path, gname=name)
+
+    def OnRestore(self):
+
+    	path = os.path.join (DocumentsPath, "my games")
+    	name = "The Elder Scrolls V Skyrim"
+    	UnPackage(source=path, gname=name)
