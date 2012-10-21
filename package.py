@@ -4,21 +4,29 @@
 
 import os
 import tarfile
-import time
-
-source = None
-      
-def PackageSystem(source, gname):
-
-    destination = gname
+   
+def Package(source, gname):
 
     try:
 
-        targetBackup = (destination + time.strftime(" (%Y.%m.%d_%H.%M.%S)") + ".tar.gz")
+        targetBackup = (gname + ".tar.gz")
         tar = tarfile.open(os.path.join(".","backup", targetBackup), "w:gz")
-        tar.add(source)
+        tar.add(source, os.path.basename(source))
         tar.close()
 
     except TypeError:
         
-        print ("Backup fail!")    
+        print ("Backup fail!")
+
+def UnPackage(source, gname):
+
+	try:
+
+		targetReBackup = (gname + ".tar.gz")
+		tar = tarfile.open(os.path.join(".", "backup", targetReBackup), "r:gz")
+		tar.extractall(source)
+		tar.close()
+
+	except TypeError:
+
+		print ("Restore fail!")

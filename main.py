@@ -58,7 +58,7 @@ print ("Checking load plugins... Loaded {0} plugins... {1}".format(len(plugin.Pl
 # END Loading all plugins
 
 print ("""
-To Start backup type 'backup' and press Enter...
+To Start backup type 'backup' or type 'restore' for restore all files...
 ...or type 'exit' for exit.""")
 
 while (s != 'exit'):
@@ -77,6 +77,17 @@ while (s != 'exit'):
             i += 1
 
         print ("Backup {0} games complite!".format(i))
+
+    elif s == 'restore':
+
+        print ("Start restore...")
+
+        for p in plugin.Plugins:
+
+            p.OnRestore()
+            i += 1
+
+        print ("Restore {0} games complite!".format(i))
 
     else:
 

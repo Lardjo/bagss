@@ -9,12 +9,13 @@ sys.path.append('../')
 
 from plugin import Plugin
 from path import DocumentsPath
-from package import PackageSystem
+from package import Package
+from package import UnPackage
 
-class NFSHPPlugin(Plugin):
+class HotPursuitPlugin(Plugin):
 
-    Name = "NFS:HP"
-    Author = "Lardjo"
+    Name = "Need for Speed(TM) Hot Pursuit"
+    Author = "Konstantin N."
     SupportOS = ["Windows"] #key-words: Windows, Linux, Darwin
 
     def OnLoad(self):
@@ -22,6 +23,12 @@ class NFSHPPlugin(Plugin):
         
     def OnCommand(self):
 
-        GamePath = os.path.join (DocumentsPath, "Criterion Games", "Need for Speed(TM) Hot Pursuit")
-        GameName = "Need_for_Speed_Hot_Pursuit"
-        PackageSystem(source=GamePath, gname=GameName)
+        path = os.path.join(DocumentsPath, "Criterion Games", "Need for Speed(TM) Hot Pursuit")
+        name = "Need for Speed(TM) Hot Pursuit"
+        Package(source=path, gname=name)
+
+    def OnRestore(self):
+
+    	path = os.path.join(DocumentsPath, "Criterion Games")
+    	name = "Need for Speed(TM) Hot Pursuit"
+    	UnPackage(source=path, gname=name)
