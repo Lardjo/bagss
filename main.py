@@ -58,7 +58,7 @@ print ("Checking load plugins... Loaded {0} plugins... {1}".format(len(plugin.Pl
 # END Loading all plugins
 
 print ("""
-To Start backup type 'backup' and press Enter...
+To Start backup type 'backup' or type 'restore' for restore all files...
 ...or type 'exit' for exit.""")
 
 while (s != 'exit'):
