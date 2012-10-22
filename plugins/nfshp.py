@@ -1,16 +1,17 @@
 #!usr/bin/env python3
-# File: nfshp.py
-# Game Name: Need for Speed Hot Pursuit
+#
+# Copyright (c) 2012
+#
+# This file is part of BAGSS, and is made available under the
+# 3-clause BSD license. See LICENSE for the full details.
 
 import os
 import sys
 
-sys.path.append('../')
-
-from plugin import Plugin
-from path import DocumentsPath
-from package import Package
-from package import UnPackage
+from bagss.plugin import Plugin
+from bagss.path import DocumentsPath
+from bagss.package import Package
+from bagss.package import UnPackage
 
 class HotPursuitPlugin(Plugin):
 
