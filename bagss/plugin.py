@@ -1,6 +1,9 @@
 #!usr/bin/env python3
-# File: plugin.py
-# Plugin System
+#
+# Copyright (c) 2012
+#
+# This file is part of BAGSS, and is made available under the
+# 3-clause BSD license. See LICENSE for the full details.
 
 import os
 import platform
@@ -23,7 +26,7 @@ class Plugin(object):
 
 def LoadPlugins():
 
-    plug = os.listdir('plugins')
+    plug = os.listdir('./plugins')
 
     for pluglist in plug:
 
