@@ -7,9 +7,7 @@
 
 import os
 import sys
-import path
-
-sys.path.append('../')
+import getpass
 
 from bagss import plugin
 from bagss import __version__
@@ -22,7 +20,7 @@ print ("""
 ================================
 """ % __version__)
 
-print ("Hi, %s!\n" % path.UserName)
+print ("Hi, {0}!\n".format(getpass.getuser()))
 
 # Checking existence of directory Backup
 
