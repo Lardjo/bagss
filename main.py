@@ -1,15 +1,18 @@
 #!usr/bin/env python3
-# File: main.py
-# Main File
+#
+# Copyright (c) 2012
+#
+# This file is part of BAGSS, and is made available under the
+# 3-clause BSD license. See LICENSE for the full details.
 
 import os
 import sys
-import plugin
 import path
 
 sys.path.append('../')
 
-from BAGSS import __version__
+from bagss import plugin
+from bagss import __version__
 
 s = ""
 
