@@ -1,6 +1,9 @@
 #!usr/bin/env python3
-# File: path.py
-# Path file
+#
+# Copyright (c) 2012
+#
+# This file is part of BAGSS, and is made available under the
+# 3-clause BSD license. See LICENSE for the full details.
 
 import os
 
@@ -10,7 +13,6 @@ SteamGamesPath = None    # Steam Common Directory
 DocumentsPath = None     # Windows My Documents Directory
 GamesPath = None         # Windows My Games Directory
 LocalAppPath = None      # Windows Local Data Directory 
-UserName = None          # User Name
 
 try:
 
@@ -44,14 +46,6 @@ try:
     key = OpenKey(HKEY_CURRENT_USER, 'Volatile Environment')
     LocalApp = QueryValueEx(key, 'LOCALAPPDATA') [0]
     LocalAppPath = os.path.normcase(os.path.join(LocalApp))
-
-except WindowsError:
-    pass
-
-try:
-    
-    key = OpenKey(HKEY_CURRENT_USER, 'Volatile Environment')
-    UserName = QueryValueEx(key, 'USERNAME') [0]
 
 except WindowsError:
     pass
